@@ -5,11 +5,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  timelineSelected : String = "Daily";
+  timelineButtons = ["Daily", "Weekly", "Monthly"];
 
   constructor() { }
 
   ngOnInit() {
-  	console.log('ngOnInit ran')
+    
   }
 
 }
