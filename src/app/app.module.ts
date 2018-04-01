@@ -14,15 +14,21 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { UserComponent } from './components/user/user.component';
-
 import { UserService } from './services/user.service';
+
+import { DeviceComponent } from './components/device/device.component';
+import { DeviceService } from './services/device.service';
+import { GarbageComponent } from './components/garbage/garbage.component';
+import { GarbageService } from './services/garbage.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     UserComponent,
-    LoginComponent
+    DeviceComponent,
+    LoginComponent,
+    GarbageComponent
   ],
   imports: [
     NgbModule.forRoot(),
@@ -31,7 +37,7 @@ import { UserService } from './services/user.service';
     AngularFireModule.initializeApp(environment.firebaseConfig, 'angularfs'),
     AngularFirestoreModule
   ],
-  providers: [UserService],
+  providers: [UserService, DeviceService, GarbageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -9,8 +9,9 @@ import {Observable} from 'rxjs/Observable';
 export class UserService {
 	userCollection: AngularFirestoreCollection<User>;
 	user: Observable<User[]>;
+	
   constructor(public afs: AngularFirestore) { 
-  	this.user = this.afs.collection('user').valueChanges();
+  	this.user = this.afs.collection('User').valueChanges();
   }
 
   getUser(){
